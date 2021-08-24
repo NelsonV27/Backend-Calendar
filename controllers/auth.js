@@ -18,7 +18,7 @@ const crearUsuario = async(req, res = response ) => {
         if( usuario ){
             return res.status(400).json({
                 ok: false,
-                msg:'Un usuario existe con ese correo'
+                msg:'El usuario ya existe'
             });
         }
 
@@ -50,7 +50,6 @@ const crearUsuario = async(req, res = response ) => {
             msg:'Por favor hable con el administrador'
         });
     }
-
     
 }
 
@@ -92,7 +91,7 @@ const loginUsuario = async(req, res = response ) => {
             uid: usuario.id,
             name: usuario.name,
             token
-        })
+        });
 
     } catch (error) {
         console.log( error );
