@@ -38,7 +38,5 @@ router.put('/:id', actualizarEvento);
 //Borrar evento
 router.delete('/:id', eliminarEvento);
 
-
-
 //exportamos el router
 module.exports = router;
